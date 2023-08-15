@@ -1,0 +1,113 @@
+const products =  [
+        {
+            _id: '1',
+            name: 'Korean Sweater',
+            category: 'Sweater',
+            image: '/image/product1.jpg',
+            price: 60,
+            brand: 'Shein',
+            rating: 4.5,
+            numReviews: 10,
+            countInStock: 6,
+        },
+        {
+            _id: '2',
+            name: 'Korean Sweater',
+            category: 'Sweater',
+            image: '/image/product2.jpg',
+            price: 60,
+            brand: 'Shein',
+            rating: 4.5,
+            numReviews: 10,
+            countInStock: 6,
+        },
+        {
+            _id: '3',
+            name: 'Korean Sweater',
+            category: 'Sweater',
+            image: '/image/product3.jpg',
+            price: 60,
+            brand: 'Shein',
+            rating: 4.5,
+            numReviews: 10,
+            countInStock: 6,
+        },
+        {
+            _id: '4',
+            name: 'Korean Sweater',
+            category: 'Sweater',
+            image: '/image/product4.jpg',
+            price: 60,
+            brand: 'Shein',
+            rating: 4.5,
+            numReviews: 10,
+            countInStock: 6,
+        },
+        {
+            _id: '5',
+            name: 'Korean Sweater',
+            category: 'Sweater',
+            image: '/image/product5.jpg',
+            price: 60,
+            brand: 'Shein',
+            rating: 4.5,
+            numReviews: 10,
+            countInStock: 6,
+        },
+        {
+            _id: '6',
+            name: 'Korean Sweater',
+            category: 'Sweater',
+            image: '/image/product6.jpg',
+            price: 60,
+            brand: 'Shein',
+            rating: 4.5,
+            numReviews: 10,
+            countInStock: 6,
+        },
+        {
+            _id: '7',
+            name: 'Korean Sweater',
+            category: 'Sweater',
+            image: '/image/product7.jpg',
+            price: 60,
+            brand: 'Shein',
+            rating: 4.5,
+            numReviews: 10,
+            countInStock: 6,
+        },
+        {
+            _id: '8',
+            name: 'Korean Sweater',
+            category: 'Sweater',
+            image: '/image/product8.jpg',
+            price: 60,
+            brand: 'Shein',
+            rating: 4.5,
+            numReviews: 10,
+            countInStock: 6,
+        },
+    ]
+const displayProducts = document.querySelector('.products');
+
+window.addEventListener('DOMContentLoaded', ()=>{
+    filterProduct(products)
+})
+
+function filterProduct(renderItems){
+    let renderProduct = renderItems.map((items)=>{
+        return`
+        <ul class="product">
+            <li>
+                <a href=""><img class="product-image" src="${items.image}" alt="${items.category}"></a>
+                <h4 class="product-name">${items.name}</h4>
+                <h4 class="product-brand">${items.brand}</h4>
+                <h4 class="product-price">${items.price}</h4>
+            </li>
+        </ul>
+        `
+    })
+    renderProduct = renderProduct.join("");
+    displayProducts.innerHTML = renderProduct;
+}
+
