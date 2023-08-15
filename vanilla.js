@@ -3,7 +3,7 @@ const products =  [
             _id: '1',
             name: 'Korean Sweater',
             category: 'Sweater',
-            image: '/image/product1.jpg',
+            image: '../image/product1.jpg',
             price: 60,
             brand: 'Adidas',
             rating: 4.5,
