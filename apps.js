@@ -31,7 +31,7 @@ function allProductDisplay(renderItems){
                 <a href=""><img class="product-image" src="${items.image}" alt="${items.category}"></a>
                 <h4 class="product-name">${items.name}</h4>
                 <h4 class="product-brand">${items.brand}</h4>
-                <h4 class="product-price">${items.price}</h4>
+                <h4 class="product-price">$${items.price}</h4>
             </li>
         </ul>
         `

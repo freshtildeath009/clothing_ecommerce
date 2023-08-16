@@ -9,35 +9,38 @@ body{
 ul{
     list-style-type: none;
 }
-a{
-    margin: 0;
-    padding: 0;
-}
+
 /* NAVIGATION BAR */
 .nav-container{
     display: flex;
     justify-content: space-around;
     align-items: center;
     font-weight: var(--fw-600);
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+    padding: 5px 0 5px 0;
     margin-bottom: 2rem;
     background: var(--clr-dornge);
     box-shadow: var(--bx-shdw);
-
-
+    position: fixed;
+    width: 100%;
+    z-index: 1;
 }
 .nav-container:hover{
     box-shadow: var(--bx-shdw);
 }
-
+.logo{
+    height: 50px;
+}
 .nav-links,
 .social-links{
     display: flex;
     text-decoration: none;
     list-style-type: none;
 }
-
+.link{
+    background: var(--clr-dornge);
+    margin: 0 1rem 0 1rem;
+    color: var(--clr-wht);
+}
 .link:hover{
     border-bottom: 2px solid;
     width: 100%;
@@ -49,8 +52,6 @@ a{
 
 ul li a{
     margin: 1rem;
-    text-decoration: none;
-    color: var(--clr-wht);
     font-weight: var(--fw-600);
     font-family: var(--ff-r);
 }
@@ -59,19 +60,33 @@ ul li a{
 .btn{
     color: var(--clr-wht);
 }
-.men-category,
-.women-category,
+.men-category{
+    display: none;
+    position: absolute;
+    margin-top: 1rem;
+    width: 100px;
+    height: 35%;
+    line-height: 3rem;
+    text-align: center;
+}
+
 .kids-category{
     display: none;
     position: absolute;
     margin-top: 1rem;
-    background: var(--clr-blk);
-    border: 2px solid var(--clr-dblk);
     width: 100px;
-    height: 33%;
+    height: 35%;
     line-height: 3rem;
     text-align: center;
-    z-index: 1;
+}
+.women-category{
+    display: none;
+    position: absolute;
+    margin-top: 1rem;
+    width: 100px;
+    height: 35%;
+    line-height: 3rem;
+    text-align: center;
 }
 .men-category.active{
     display: block;
