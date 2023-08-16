@@ -1,91 +1,28 @@
-const products =  [
-        {
-            _id: '1',
-            name: 'Korean Sweater',
-            category: 'Sweater',
-            image: '../image/product1.jpg',
-            price: 60,
-            brand: 'Adidas',
-            rating: 4.5,
-            numReviews: 10,
-            countInStock: 6,
-        },
-        {
-            _id: '2',
-            name: 'Korean Sweater',
-            category: 'Sweater',
-            image: '/image/product2.jpg',
-            price: 60,
-            brand: 'Shein',
-            rating: 4.5,
-            numReviews: 10,
-            countInStock: 6,
-        },
-        {
-            _id: '3',
-            name: 'Korean Sweater',
-            category: 'Sweater',
-            image: '/image/product3.jpg',
-            price: 60,
-            brand: 'Shein',
-            rating: 4.5,
-            numReviews: 10,
-            countInStock: 6,
-        },
-        {
-            _id: '4',
-            name: 'Korean Sweater',
-            category: 'Sweater',
-            image: '/image/product4.jpg',
-            price: 60,
-            brand: 'Adidas',
-            rating: 4.5,
-            numReviews: 10,
-            countInStock: 6,
-        },
-        {
-            _id: '5',
-            name: 'Korean Sweater',
-            category: 'Sweater',
-            image: '/image/product5.jpg',
-            price: 60,
-            brand: 'Nike',
-            rating: 4.5,
-            numReviews: 10,
-            countInStock: 6,
-        },
-        {
-            _id: '6',
-            name: 'Korean Sweater',
-            category: 'Sweater',
-            image: '/image/product6.jpg',
-            price: 60,
-            brand: 'Shein',
-            rating: 4.5,
-            numReviews: 10,
-            countInStock: 6,
-        },
-        {
-            _id: '7',
-            name: 'Korean Sweater',
-            category: 'Sweater',
-            image: '/image/product7.jpg',
-            price: 60,
-            brand: 'Shein',
-            rating: 4.5,
-            numReviews: 10,
-            countInStock: 6,
-        },
-        {
-            _id: '8',
-            name: 'Korean Sweater',
-            category: 'Sweater',
-            image: '/image/product8.jpg',
-            price: 60,
-            brand: 'Water',
-            rating: 4.5,
-            numReviews: 10,
-            countInStock: 6,
-        },
-    ]
+const menToggle = document.querySelector('.men');
+const menCategory = document.querySelector('.men-category');
+const womenToggle = document.querySelector('.women');
+const womenCategory = document.querySelector('.women-category');
+const kidToggle = document.querySelector('.kids');
+const kidCategory = document.querySelector('.kids-category');
 
+menToggle.addEventListener('click',()=>{
+    menCategory.classList.toggle('active');
+    if(menCategory.classList){
+        womenCategory.classList.remove('active');
+        kidCategory.classList.remove('active');
+    }
+})
+womenToggle.addEventListener('click',()=>{
+    womenCategory.classList.toggle('active');
+    if(womenCategory.classList){
+        menCategory.classList.remove('active');
+        kidCategory.classList.remove('active');
+    }
+})
+kidToggle.addEventListener('click',()=>{
+    kidCategory.classList.toggle('active');
+    if(kidCategory.classList){
+        menCategory.classList.remove('active');
+        womenCategory.classList.remove('active');
+    }
+})

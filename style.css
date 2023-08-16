@@ -24,7 +24,8 @@ a{
     margin-bottom: 2rem;
     background: var(--clr-dornge);
     box-shadow: var(--bx-shdw);
-;
+
+
 }
 .nav-container:hover{
     box-shadow: var(--bx-shdw);
@@ -55,6 +56,9 @@ ul li a{
 }
 
 /* TOGGLE CATEGORY */
+.btn{
+    color: var(--clr-wht);
+}
 .men-category,
 .women-category,
 .kids-category{
@@ -64,7 +68,7 @@ ul li a{
     background: var(--clr-blk);
     border: 2px solid var(--clr-dblk);
     width: 100px;
-    height: 12rem;
+    height: 33%;
     line-height: 3rem;
     text-align: center;
     z-index: 1;
@@ -91,8 +95,8 @@ input{
     width: 10rem;
 }
 button{
-    border-radius: 0 10px 10px 0;
-    padding: 0 1rem;
+    background: var(--clr-blk);
+    width: 100%;
 }
 /* TABLET NAVIGATION BAR */
 @media only screen and (max-width: 800px){
@@ -142,7 +146,6 @@ span{
 /* FOOTER */
 .footer{
     width: 100%;
-    margin-top: 4rem;
     padding: 0.1rem;
     display: flex;
     justify-content: center;
@@ -151,6 +154,7 @@ span{
     color: var(--clr-dblk);
     font-weight: var(--fw-400);
     opacity: 0.5;
+
 }
 .text-transparent{
     color: var(--clr-wht);
