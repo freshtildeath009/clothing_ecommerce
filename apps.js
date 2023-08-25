@@ -9,6 +9,7 @@ window.addEventListener('DOMContentLoaded', ()=>{
 allBtn.forEach((btns)=>{
     btns.addEventListener('click', (e)=>{
         const btnCategory = e.currentTarget.dataset.id;
+        console.log(typeof btnCategory);
         const filterAllDataProduct = allDataProduct.filter((allProduct)=>{
             if(allProduct.category === btnCategory){
                 return allProduct;
