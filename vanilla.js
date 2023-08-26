@@ -26,3 +26,5 @@ kidToggle.addEventListener('click',()=>{
         womenCategory.classList.remove('active');
     }
 })
+
+
