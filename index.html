@@ -13,10 +13,13 @@
 </head>
 
 <body>
+    <!-- Nav -->
     <header>
         <div class="nav-container">
+            <!-- logo -->
            <img class="logo" src="/banner/logo.png" alt="">
-  
+            
+           <!-- Category -->
             <ul class="nav-links">
                 <li><button class="men link">Men</button>
                     <ul class="men-category">
@@ -49,23 +52,79 @@
                     </ul>
                 </li>
             </ul>
+            <!-- Cart -->
+            <div class="cart-btn-container">
+                <button class="cart-btn">X</button>
+            </div>
+            <div class="cart-container remove-category">
+                <div>
+                    <div class="cart-title-container">
+                        <h1>My Cart</h1>
+                    </div>
+                    <hr>
+                    <!-- Single Cart Item -->
+                    <div class="cart-single-item">
+                        <!-- <div class="cart-item-container"> -->
+                            <!-- <img class="cart-image" src="./cap/cap1.jpg" alt="">
+                            <div class="cart-item-detail-container">
+                                <div class="cart-item-name-price-btn">
+                                    <h4 class="cart-product-name">Korean Sweater</h4>
+                                    <h4 class="brand">Uniqlo</h4>
+                                    <h4 class="cart-item-price">$20</h4>
+                                    <button class="cart-btn-remove-item">remove</button>
+                                </div>
+                                
+                                <div class="cart-item-quantity-container">
+                                    <button class="increase">+</button>
+                                    <h4 class="quantity">0</h4>
+                                    <button class="decrease">-</button>
+                                </div>
+                            </div> -->
+                        <!-- </div> -->
+                    </div>
+                    <!-- End Cart Item -->
+                    
+                    
+                    
+                </div>
+                <!-- Cart Footer -->
+                <div class="cart-footer"><hr>
+                    <div class="total-container">Total:<h4 class="total">0</h4></div>
+                    <button class="cart-btn-clear-item" type="button">Clear</button>
+                </div>
+                <!-- End Cart Footer -->
+            </div>
+            
+            <div class="block remove-category"><!-- When cart is toggle, its add the background that has opacity -->
+
+            </div>
         </div>
     </header>
-    <article>
+    <!-- End Nav -->
+    
+    <!-- Sale -->
+    <article class="remove-category">
         <div class="sale-container">
             <img src="banner/5092428.jpg" alt="">
         </div>
     </article>
-    <main id="main-container">
+    <!-- End Sale -->
+    <!-- Products -->
+    <main class="remove-category" id="main-container">
         <div class="products" >
-        
+            <!-- Single Product -->
+            
+            <!-- End Single Product -->
         </div>
     </main> 
-    <footer class="footer">
+    <!-- End Product -->
+    <!-- Footer -->
+    <footer class="footer remove-category">
         <h1 class="text-transparent">All rights reserved @2022</h1>
     </footer>
-    <script src="apps.js"></script>
+    <!-- End Footer -->
     <script src="data.js"></script>
+    <script src="apps.js"></script>
     <script src="vanilla.js"></script>
 </body>
 </html>

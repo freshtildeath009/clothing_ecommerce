@@ -1,6 +1,6 @@
 const allDataProduct =  [
         {
-            _id: '1',
+            id: '1',
             name: 'Korean Sweater',
             category: 'sweater',
             image: 'sweater/product1.jpg',
@@ -11,7 +11,7 @@ const allDataProduct =  [
             countInStock: 6,
         },
         {
-            _id: '2',
+            id: '2',
             name: 'Korean Sweater',
             category: 'sweater',
             image: 'sweater/product2.jpg',
@@ -22,7 +22,7 @@ const allDataProduct =  [
             countInStock: 6,
         },
         {
-            _id: '3',
+            id: '3',
             name: 'Korean Sweater',
             category: 'sweater',
             image: 'sweater/product3.jpg',
@@ -33,7 +33,7 @@ const allDataProduct =  [
             countInStock: 6,
         },
         {
-            _id: '4',
+            id: '4',
             name: 'Korean Sweater',
             category: 'sweater',
             image: 'sweater/product4.jpg',
@@ -44,7 +44,7 @@ const allDataProduct =  [
             countInStock: 6,
         },
         {
-            _id: '5',
+            id: '5',
             name: 'Korean Sweater',
             category: 'sweater',
             image: 'sweater/product5.jpg',
@@ -55,7 +55,7 @@ const allDataProduct =  [
             countInStock: 6,
         },
         {
-            _id: '6',
+            id: '6',
             name: 'Korean Sweater',
             category: 'sweater',
             image: 'sweater/product6.jpg',
@@ -66,7 +66,7 @@ const allDataProduct =  [
             countInStock: 6,
         },
         {
-            _id: '7',
+            id: '7',
             name: 'Korean Sweater',
             category: 'sweater',
             image: 'sweater/product7.jpg',
@@ -77,7 +77,7 @@ const allDataProduct =  [
             countInStock: 6,
         },
         {
-            _id: '8',
+            id: '8',
             name: 'Korean Sweater',
             category: 'sweater',
             image: 'sweater/product8.jpg',
@@ -88,7 +88,7 @@ const allDataProduct =  [
             countInStock: 6,
         },
         {
-            _id: '9',
+            id: '9',
             name: 'Airsim T-Shirt',
             category: 'tshirt',
             image: 'tshirt/tshirt1.avif',
@@ -99,7 +99,7 @@ const allDataProduct =  [
             countInStock: 6,
         },
         {
-            _id: '10',
+            id: '10',
             name: 'Korean Sweater',
             category: 'tshirt',
             image: 'tshirt/tshirt2.avif',
@@ -110,7 +110,7 @@ const allDataProduct =  [
             countInStock: 6,
         },
         {
-            _id: '11',
+            id: '11',
             name: 'Korean Sweater',
             category: 'tshir',
             image: 'tshirt/tshirt3.avif',
@@ -121,7 +121,7 @@ const allDataProduct =  [
             countInStock: 6,
         },
         {
-            _id: '12',
+            id: '12',
             name: 'Korean Sweater',
             category: 'tshirt',
             image: 'tshirt/tshirt4.avif',
@@ -132,7 +132,7 @@ const allDataProduct =  [
             countInStock: 6,
         },
         {
-            _id: '13',
+            id: '13',
             name: 'Korean Pants',
             category: 'pants',
             image: 'pants/pants1.png',
@@ -143,7 +143,7 @@ const allDataProduct =  [
             countInStock: 6,
         },
         {
-            _id: '14',
+            id: '14',
             name: 'Korean Pants',
             category: 'pants',
             image: 'pants/pants2.png',
@@ -154,7 +154,7 @@ const allDataProduct =  [
             countInStock: 6,
         },
         {
-            _id: '15',
+            id: '15',
             name: 'Korean Pants',
             category: 'pants',
             image: 'pants/pants3.png',
@@ -165,7 +165,7 @@ const allDataProduct =  [
             countInStock: 6,
         },
         {
-            _id: '16',
+            id: '16',
             name: 'Korean Pants',
             category: 'short',
             image: 'short/short1.png',
@@ -176,7 +176,7 @@ const allDataProduct =  [
             countInStock: 6,
         },
         {
-            _id: '17',
+            id: '17',
             name: 'Korean Pants',
             category: 'short',
             image: 'short/short2.png',
@@ -187,7 +187,7 @@ const allDataProduct =  [
             countInStock: 6,
         },
         {
-            _id: '18',
+            id: '18',
             name: 'Korean Pants',
             category: 'short',
             image: 'short/short3.png',
@@ -198,7 +198,7 @@ const allDataProduct =  [
             countInStock: 6,
         },
         {
-            _id: '19',
+            id: '19',
             name: 'Korean Pants',
             category: 'short',
             image: 'short/short4.png',
@@ -209,7 +209,7 @@ const allDataProduct =  [
             countInStock: 6,
         },
         {
-            _id: '20',
+            id: '20',
             name: 'Korean Pants',
             category: 'cap',
             image: 'cap/cap1.jpg',
@@ -220,7 +220,7 @@ const allDataProduct =  [
             countInStock: 6,
         },
         {
-            _id: '21',
+            id: '21',
             name: 'Korean Pants',
             category: 'cap',
             image: 'cap/cap2.jpg',
@@ -231,7 +231,7 @@ const allDataProduct =  [
             countInStock: 6,
         },
         {
-            _id: '22',
+            id: '22',
             name: 'Korean Pants',
             category: 'cap',
             image: 'cap/cap3.jpg',
@@ -242,4 +242,3 @@ const allDataProduct =  [
             countInStock: 6,
         }
     ]
-

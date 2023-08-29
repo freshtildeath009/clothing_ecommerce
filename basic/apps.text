@@ -1,0 +1,51 @@
+// Selector Catergory
+const displayProducts = document.querySelector('.products');
+const allBtn = document.querySelectorAll('.btn');
+
+// Display to DOM
+window.addEventListener('DOMContentLoaded', ()=>{
+    allProductDisplay(allDataProduct);
+})
+
+// Filter allDataProduct from data.js
+allBtn.forEach((btns)=>{
+    btns.addEventListener('click', (e)=>{
+        // Get the dataset-id
+        const btnCategory = e.currentTarget.dataset.id;
+        // Filter allDataProduct
+        const filterAllDataProduct = allDataProduct.filter((allProduct)=>{
+            // If allProduct category is === to dataset-id
+            if(allProduct.category === btnCategory){
+                return allProduct;
+            }
+
+        })
+        // If btnCategory is === to dataset-id "all"
+        if(btnCategory === 'all'){
+            allProductDisplay(allDataProduct)
+        // Else result of filter 
+        }else{
+            allProductDisplay(filterAllDataProduct)
+        }
+    })
+})
+
+// Copy html item product and embeded the AllDataProduct value
+function allProductDisplay(renderItems){
+    let renderProduct = renderItems.map((items)=>{
+        return `
+        <ul class="product">
+            <li>
+                <button class="btn-add-to-cart" dataset-id="${items.id}">ADD TO CART</button>
+                <a class="image-anchor" href=""><img class="product-image" src="${items.image}" alt="${items.category}"></a>
+                <h4 class="product-name">${items.name}</h4>
+                <h4 class="product-brand">${items.brand}</h4>
+                <h4 class="product-price">$${items.price}</h4>
+            </li>
+        </ul>
+        `
+    })
+
+    renderProduct = renderProduct.join("");
+    displayProducts.innerHTML = renderProduct;
+}
