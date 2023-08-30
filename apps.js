@@ -83,6 +83,7 @@ class UI{
                     const item = products.find(item => item.id === id);
                     cart.push({...item, quantity: 1});
                     this.updateCart()
+                    
                 }
             })
             
@@ -92,7 +93,8 @@ class UI{
 
    
     updateCart(){
-        this.displayCartItem()
+        this.displayCartItem();
+        this.changeQtyItem()
     }
 
     displayCartItem(){
@@ -100,7 +102,6 @@ class UI{
         createDiv.classList.add('cart-item-container');
         cart.forEach((item)=>{
             createDiv.innerHTML =`
-            
                 <img class="cart-image" src="${item.image}" alt="">
                 <div class="cart-item-detail-container">
                     <div class="cart-item-name-price-btn">
@@ -111,24 +112,29 @@ class UI{
                     </div>
                     
                     <div class="cart-item-quantity-container">
-                        <button class="increase">+</button>
+                        <button class="increase btnQty" onclick="this.changeQtyItem('increase', ${item.id})">+</button>
                         <h4 class="quantity">${item.quantity}</h4>
-                        <button class="decrease">-</button>
+                        <button class="decrease btnQty" onclick="this.changeQtyItem('decreaese', ${item.id})">-</button>
                     </div>
                 </div>
-            
             `
         cartSingleItem.appendChild(createDiv);
         })
     }
-    
+
+    changeQtyItem(action, id){
+        cart = cart.map((item)=>{
+            console.log(item);
+        })
+   
+    }
 }
 
 document.addEventListener('DOMContentLoaded', ()=>{
     const ui = new UI()
     const products = new Products();
-    ui.updateCart();
+    // ui.updateCart();
     ui.displayProduct(products.getProducts());
     ui.filterProducts(products.getProducts());
-    
+    ui.changeQtyItem()
 })
