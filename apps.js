@@ -122,12 +122,12 @@ class UI{
         })
     }
 
-    changeQtyItem(action, id){
-        cart = cart.map((item)=>{
-            console.log(item);
-        })
+    // changeQtyItem(action, id){
+    //     cart = cart.map((item)=>{
+            
+    //     })
    
-    }
+    // }
 }
 
 document.addEventListener('DOMContentLoaded', ()=>{
