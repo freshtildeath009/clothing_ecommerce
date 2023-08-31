@@ -152,7 +152,35 @@ class UI{
         });
         // Cart functionality
         cartSingleItemContainerDOM.addEventListener('click', event =>{
-            console.log(event.target);
+            if(event.target.classList.contains('cart-btn-remove-item')){
+                let removeItem = event.target;
+                let id = removeItem.dataset.id;
+                cartSingleItemContainerDOM.removeChild(removeItem.parentElement.parentElement.parentElement)
+                this.removeItem(id);
+            }else if(event.target.classList.contains('increase')){
+                let addItemQuantity = event.target;
+                let id = addItemQuantity.dataset.id;
+                let tempItem = cart.find(item => item.id === id);
+                tempItem.quantity = tempItem.quantity + 1;
+                Storage.saveCart(cart);
+                this.setCartValues(cart);
+                addItemQuantity.nextElementSibling.innerText = tempItem.quantity;
+            }else if(event.target.classList.contains('decrease')){
+                let lowerItemQuantity = event.target;
+                let id = lowerItemQuantity.dataset.id;
+                let tempItem = cart.find(item => item.id === id);
+                tempItem.quantity = tempItem.quantity - 1;
+
+                if(tempItem.quantity > 0){
+                    Storage.saveCart();
+                    this.setCartValues(cart);
+                    lowerItemQuantity.previousElementSibling.innerText = tempItem.quantity;
+
+                }else{
+                    cartSingleItemContainerDOM.removeChild(lowerItemQuantity.parentElement.parentElement.parentElement);
+                    this.removeItem(id);
+                }
+            }
         })
     }
 
@@ -162,7 +190,6 @@ class UI{
         cartItem.forEach(id => this.removeItem(id));
         while(cartSingleItemContainerDOM.children.length > 0){
             cartSingleItemContainerDOM.removeChild(cartSingleItemContainerDOM.children[0]);
-            console.log(cartSingleItemContainerDOM.children);
         }
     }
 
