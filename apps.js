@@ -83,6 +83,7 @@ class UI{
                 buttons.addEventListener('click',(event)=>{
                     event.currentTarget.innerText = 'IN CART';
                     event.currentTarget.disabled = true;
+                    
                     // Get product from products
                     let cartItem = {...Storage.getProducts(singleIdProduct), quantity: 1};
                     // Add product to the cart
@@ -230,6 +231,7 @@ class Storage{
 document.addEventListener('DOMContentLoaded',()=>{
     const products = new Products();
     const ui = new UI();
+    Storage.saveProducts(products.getProducts())
     // Setup app
     ui.setupApp()
     // Get all products
