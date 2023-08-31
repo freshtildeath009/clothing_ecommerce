@@ -15,7 +15,6 @@ button{
     color: var(--clr-wht);
 }
 span{
-    text-decoration: line-through;
     color: var(--clr-wht);
     font-size: var(--fs-0-8);
 }
@@ -214,7 +213,7 @@ button{
     display: flex;
 
 }
-.cart-btn-clear-item{
+.clear-cart-btn{
     width: 103px;
     height: 35px;
     background: var(--clr-ornge);

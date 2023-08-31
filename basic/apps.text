@@ -10,15 +10,11 @@ window.addEventListener('DOMContentLoaded', ()=>{
 // Filter allDataProduct from data.js
 allBtn.forEach((btns)=>{
     btns.addEventListener('click', (e)=>{
-        // Get the dataset-id
         const btnCategory = e.currentTarget.dataset.id;
-        // Filter allDataProduct
         const filterAllDataProduct = allDataProduct.filter((allProduct)=>{
-            // If allProduct category is === to dataset-id
             if(allProduct.category === btnCategory){
                 return allProduct;
             }
-
         })
         // If btnCategory is === to dataset-id "all"
         if(btnCategory === 'all'){
